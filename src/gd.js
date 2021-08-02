@@ -611,7 +611,7 @@ async function real_copy ({ source, target, name, min_size, update, dncnr, not_t
 
 async function copy_files ({ files, mapping, service_account, root, task_id }) {
   if (!files.length) return
-  console.log('\nStarted copying files, total：', files.length)
+  console.log('\nBắt Đầu Sao Chép Tệp,Tổng Số：', files.length)
 
   const loop = setInterval(() => {
     const now = dayjs().format('HH:mm:ss')
