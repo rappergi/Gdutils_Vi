@@ -615,7 +615,7 @@ async function copy_files ({ files, mapping, service_account, root, task_id }) {
 
   const loop = setInterval(() => {
     const now = dayjs().format('HH:mm:ss')
-    const message = `${now} | Number of files copied ${count} | ongoing ${concurrency} | Number of Files Pending ${files.length}`
+    const message = `${now} | Tổng số file đã copy ${count} | đang copy ${concurrency} | Tổng số file đang chờ ${files.length}`
     print_progress(message)
   }, 1000)
 
@@ -658,7 +658,7 @@ async function copy_files ({ files, mapping, service_account, root, task_id }) {
   // const loop = setInterval(() => {
   //   const now = dayjs().format('HH:mm:ss')
   //   const {activeCount, pendingCount} = limit
-  //   const message = `${now} | Number of files copied ${count} | Ongoing ${activeCount} | Pending ${pendingCount}`
+  //   const message = `${now} | Tổng số file đã copy ${count} | đang copy ${concurrency} | Tổng số file đang chờ ${files.length}`
   //   print_progress(message)
   // }, 1000)
   // May cause excessive memory usage and be forced to exit by node
