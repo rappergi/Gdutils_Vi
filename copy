@@ -35,19 +35,19 @@ if (validate_fid(source)) {
     if (!validate_fid(target)) throw new Error('Drive ID is incorrect')
     return copy_file(source, target, service_account).then(r => {
       const link = 'https://drive.google.com/drive/folders/' + target
-      console.log('Clone is completed，File Location：\n', link)
+      console.log('Sao Chép Thành Công,Link File：\n', link)
     }).catch(console.error)
   }
   let min_size
   if (size) {
-    console.log(`Do not Copy Size File Below ${size} `)
+    console.log(`Không sao chép được size tệp bên dưới ${size} `)
     min_size = bytes.parse(size)
   }
   copy({ source, target, name, min_size, update, not_teamdrive, service_account, dncnr }).then(folder => {
     if (!folder) return
     const link = 'https://drive.google.com/drive/folders/' + folder.id
-    console.log('\nClone Completed，Folder Link：\n', link)
+    console.log('\nSao Chép Thành Công, Folders Link：\n', link)
   })
 } else {
-  console.warn('FolderID is wrong or invalid')
+  console.warn('ID Folders sai hoặc không hợp lệ')
 }
