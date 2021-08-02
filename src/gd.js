@@ -570,8 +570,8 @@ async function real_copy ({ source, target, name, min_size, update, dncnr, not_t
       let files = arr.filter(v => v.mimeType !== FOLDER_TYPE)
       if (min_size) files = files.filter(v => v.size >= min_size)
       const folders = arr.filter(v => v.mimeType === FOLDER_TYPE)
-      console.log('Number of folders to be copied：', folders.length)
-      console.log('Number of files to be copied：', files.length)
+      console.log('Số lượng thư mục sao chép：', folders.length)
+      console.log('Số lượng file sao chép：', files.length)
       const mapping = await create_folders({
         source,
         folders,
@@ -594,8 +594,8 @@ async function real_copy ({ source, target, name, min_size, update, dncnr, not_t
     let files = arr.filter(v => v.mimeType !== FOLDER_TYPE)
     if (min_size) files = files.filter(v => v.size >= min_size)
     const folders = arr.filter(v => v.mimeType === FOLDER_TYPE)
-    console.log('Number of folders to be copied：', folders.length)
-    console.log('Number of files to be copied：', files.length)
+    console.log('số lượng thư mục sao chép：', folders.length)
+    console.log('số lượng file sao chép：', files.length)
     const mapping = await create_folders({
       source,
       folders,
