@@ -270,7 +270,7 @@ async function walk_and_save ({ fid, not_teamdrive, update, service_account, wit
     console.error(e)
   }
   console.log('\nInfo obtained')
-  unfinished_folders.length ? console.log('Unread FolderID：', JSON.stringify(unfinished_folders)) : console.log('All Folders have been read')
+  unfinished_folders.length ? console.log('Unread FolderID：', JSON.stringify(unfinished_folders)) : console.log('Tất cả thư mục đã được Scan')
   clearInterval(loop)
   if (tg_loop) {
     clearInterval(tg_loop)
