@@ -35,7 +35,7 @@ if (validate_fid(source)) {
     if (!validate_fid(target)) throw new Error('Drive ID is incorrect')
     return copy_file(source, target, service_account).then(r => {
       const link = 'https://drive.google.com/drive/folders/' + target
-      console.log('Sao Chép Thành Công,Link File：\n', link)
+      console.log('Sao Chép Thành Công,File Link：\n', link)
     }).catch(console.error)
   }
   let min_size
